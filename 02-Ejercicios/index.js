@@ -4,6 +4,7 @@
 // La función debe evaluar si el array recibido posee un tamaño mayor a 0 (cero).
 // Si el tamaño del array es 0, debe retornar false.
 // Si el tamaño del array es mayor a 0, debe reemplazar el último valor del array por el valor recibido como parámetro.
+// array.push() -- array.pop()
 // Finalmente, debe retornar el nuevo array.
 
 function reemplazar(unArray, unValor) {

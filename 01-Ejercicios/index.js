@@ -3,7 +3,18 @@
 // Si los números ingresados son iguales, debe retorar el string "Son iguales"
 
 function determinarMayor(num1, num2) {
-  // Armar acá el cuerpo de la función
+  /*if (num1 > num2) {
+    return num1;
+  } else {
+    if (num2 > num1) {
+      return num2;
+    } else {
+      return "Son iguales";
+    }
+  }*/
+  if (num1 > num2) return num1;
+  if (num2 > num1) return num2;
+  return "Son iguales";
 }
 
 // Implementar la función parImpar, la cual debe recibir por parámetros un número entero.
@@ -11,7 +22,11 @@ function determinarMayor(num1, num2) {
 // Retornar false... si el número es impar
 
 function parImpar(num) {
-  // Armar acá el cuerpo de la función
+  if (num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Implementar la función esNumero, la cual debe recibir por parámetros un valor cualquiera.
@@ -19,7 +34,8 @@ function parImpar(num) {
 // Retornar false... si el valor recibido NO es un número
 
 function esNumero(num) {
-  // Armar acá el cuerpo de la función
+  if (typeof num === "number") return true;
+  return false;
 }
 
 //No tocar nada debajo de esta línea
