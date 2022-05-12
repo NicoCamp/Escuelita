@@ -4,6 +4,15 @@
 
 function determinarMayor(num1, num2) {
   // Armar acá el cuerpo de la función
+  if (num1 < num2) {
+    return num2;
+  } else {
+    if (num1 > num2) {
+      return num1;
+    } else {
+      return "Son iguales";
+    }
+  }
 }
 
 // Implementar la función parImpar, la cual debe recibir por parámetros un número entero.
@@ -12,6 +21,11 @@ function determinarMayor(num1, num2) {
 
 function parImpar(num) {
   // Armar acá el cuerpo de la función
+  if (num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Implementar la función esNumero, la cual debe recibir por parámetros un valor cualquiera.
@@ -20,6 +34,11 @@ function parImpar(num) {
 
 function esNumero(num) {
   // Armar acá el cuerpo de la función
+  if (isNaN(num)) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 //No tocar nada debajo de esta línea
