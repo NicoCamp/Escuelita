@@ -7,8 +7,17 @@
 // array.push() -- array.pop()
 // Finalmente, debe retornar el nuevo array.
 
+const { arrayBuffer } = require("stream/consumers");
+
 function reemplazar(unArray, unValor) {
   // Cuerpo de la función
+  if (unArray.length) {
+    unArray.pop();
+    unArray.push(unValor);
+    return unArray;
+  } else {
+    return !!unArray.length;
+  }
 }
 
 // Implementar la función soloPares, la cual va a recibir por parámetro un array.
@@ -18,6 +27,14 @@ function reemplazar(unArray, unValor) {
 
 function soloPares(unArray) {
   // Cuerpo de la función
+  let pares = [];
+  for (let i = 0; i < unArray.length; i++) {
+    if (unArray[i] % 2 == 0) {
+      pares.push(unArray[i]);
+    }
+  }
+  if (pares.length) return pares;
+  return "No hay pares";
 }
 
 module.exports = { reemplazar, soloPares };
