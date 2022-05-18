@@ -8,7 +8,10 @@
 // Finalmente, debe retornar el nuevo array.
 
 function reemplazar(unArray, unValor) {
-  // Cuerpo de la función
+  if (!unArray.length) return false;
+  unArray.pop();
+  unArray.push(unValor);
+  return unArray;
 }
 
 // Implementar la función soloPares, la cual va a recibir por parámetro un array.
@@ -17,7 +20,12 @@ function reemplazar(unArray, unValor) {
 // debe retornar el string "No hay pares"
 
 function soloPares(unArray) {
-  // Cuerpo de la función
+  let pares = [];
+  for (let i = 0; i < unArray.length; i++)
+    if (unArray[i] % 2 === 0) pares.push(unArray[i]);
+
+  if (pares.length) return pares;
+  return "No hay pares";
 }
 
 module.exports = { reemplazar, soloPares };
