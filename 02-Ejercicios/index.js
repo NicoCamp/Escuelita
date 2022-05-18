@@ -29,7 +29,7 @@ function soloPares(unArray) {
   // Cuerpo de la función
   let pares = [];
   for (let i = 0; i < unArray.length; i++) {
-    if (unArray[i] % 2 == 0) {
+    if (unArray[i] % 2 === 0) {
       pares.push(unArray[i]);
     }
   }
